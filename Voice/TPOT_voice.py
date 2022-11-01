@@ -21,7 +21,7 @@ df.isnull().sum()
 
 
 x = df.iloc[:,:20] # input
-y = df.iloc[:,20:] # output - price
+y = df.iloc[:,20:] # output - label
 
 from sklearn.model_selection import cross_val_score
 
