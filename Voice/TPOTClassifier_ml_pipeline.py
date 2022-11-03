@@ -9,8 +9,8 @@ features = tpot_data.drop('target', axis=1)
 training_features, testing_features, training_target, testing_target = \
             train_test_split(features, tpot_data['target'], random_state=None)
 
-# Average CV score on the training set was: 0.9846612978667155
-exported_pipeline = GradientBoostingClassifier(learning_rate=0.5, max_depth=10, max_features=0.25, min_samples_leaf=14, min_samples_split=17, n_estimators=100, subsample=0.55)
+# Average CV score on the training set was: 0.9842098305980924
+exported_pipeline = GradientBoostingClassifier(learning_rate=0.5, max_depth=9, max_features=0.45, min_samples_leaf=15, min_samples_split=14, n_estimators=100, subsample=0.8)
 
 exported_pipeline.fit(training_features, training_target)
 results = exported_pipeline.predict(testing_features)
